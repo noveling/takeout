@@ -1,0 +1,121 @@
+{
+  "id": "1726531",
+  "name": "mytateout",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "752988",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "7824122",
+      "name": "yes",
+      "font_class": "yes",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "11349057",
+      "name": "good",
+      "font_class": "good",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "15022618",
+      "name": "good",
+      "font_class": "bad",
+      "unicode": "f0b7",
+      "unicode_decimal": 61623
+    },
+    {
+      "icon_id": "1160503",
+      "name": "heart",
+      "font_class": "heart",
+      "unicode": "e707",
+      "unicode_decimal": 59143
+    },
+    {
+      "icon_id": "7826085",
+      "name": "close",
+      "font_class": "baseline-close-px",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "7141585",
+      "name": "star",
+      "font_class": "star",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "5634361",
+      "name": "shopping-cart",
+      "font_class": "shopping-cart",
+      "unicode": "f0b6",
+      "unicode_decimal": 61622
+    },
+    {
+      "icon_id": "11349318",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "46151",
+      "name": "discount",
+      "font_class": "discount",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "405171",
+      "name": "sey-discount",
+      "font_class": "sey-discount",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "1446386",
+      "name": "offer",
+      "font_class": "offer",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "5810275",
+      "name": "subtract_fill",
+      "font_class": "subtract_fill",
+      "unicode": "e808",
+      "unicode_decimal": 59400
+    },
+    {
+      "icon_id": "8729893",
+      "name": "品牌管理",
+      "font_class": "pinpaiguanli",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "11132204",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "13037228",
+      "name": "price",
+      "font_class": "price",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    }
+  ]
+}
