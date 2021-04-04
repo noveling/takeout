@@ -1,7 +1,7 @@
 <template>
   <div class="tab-bar">
     <div class="left">
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" @click="leftIconClick">
         <div class="iconfont logo" :class="{active:totalprice>0}">
           <span class="icon-shopping-cart"></span>
         </div>
@@ -20,6 +20,15 @@ export default {
   props:{
     sellerinfo:{
       default:()=>{}
+    },
+    left_icon_btn:{
+      type:Boolean,
+      defult:false
+    }
+  },
+  methods:{
+    leftIconClick(){
+      if(this.left_icon_btn){this.$emit("btnClick")}
     }
   },
   computed:{
@@ -48,6 +57,7 @@ export default {
     left 0
     background-color #141d27
     color #80858a
+    z-index 99
     .left
       flex 1
       height 100%

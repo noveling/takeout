@@ -7,7 +7,9 @@
     </div>
     <transition name="fade"><detail :seller="sellerinfo" @close="changeDetail" v-show="detailState"></detail></transition>
     <transition name="slide"><food v-if="showDetail" :food="currentGood" @back="closeDetail"></food></transition>
-    <tab-bar :sellerinfo="sellerinfo"></tab-bar>
+    <tab-bar :sellerinfo="sellerinfo" left_icon_btn @btnClick="showCart"></tab-bar>
+    <transition name="pop"><cart-list class="cart-list" v-if="showCartlist"></cart-list></transition>
+    <div class="mask" v-if="showCartlist" @click="showCart"></div>
   </div>    
 </template>
 
@@ -19,13 +21,16 @@ import ControlTab from 'components/content/ControlTab'
 import {getSeller} from 'network/api'
 import Food from './page/childComps/food'
 import TabBar from 'components/content/tabbar/TabBar'
+import CartList from './page/childComps/CartList'
+import {mapState} from 'vuex'
 export default {
   components:{
       Brand,
       ControlTab,
       Detail,
       Food,
-      TabBar
+      TabBar,
+      CartList
   },
   data(){
       return {
@@ -33,12 +38,16 @@ export default {
           tabmenu:['商品','评论','商家'],
           detailState:false,
           showDetail:false,
+          showCartlist:false,
           currentGood:{}
       }
   },
+  computed:{
+    ...mapState(['cart'])
+  },
   methods:{
     changeDetail(){
-      this.detailState = !this.detailState
+        this.detailState = !this.detailState
     },
     showMore(food){
       this.currentGood = food
@@ -46,6 +55,9 @@ export default {
     },
     closeDetail(){
       this.showDetail = false
+    },
+    showCart(){
+      if(this.cart.length != 0){this.showCartlist = !this.showCartlist}
     }
   },
   created(){
@@ -62,6 +74,11 @@ export default {
     top 134px
     right 0
     left 0
+  .cart-list
+    position fixed
+    z-index 8
+    bottom 49px
+    background-color #ffffff
   .fade-enter-active,.fade-leave-active
     transition opacity .5s
   .fade-enter, .fade-leave-to
@@ -70,4 +87,14 @@ export default {
     transition all .15s linear
   .slide-enter,.slide-leave-active
     transform translate3d(100%,0,0)
+  .pop-enter-active,.pop-leave-active
+    transition all .15s linear
+  .pop-enter,.pop-leave-active
+    transform translate3d(0,100%,0)
+  .mask 
+    position fixed
+    background-color $mask
+    width 100vw
+    height 100vh
+    z-index 7
 </style>
